@@ -1,0 +1,28 @@
+{
+  "name": "fhir_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon start app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvincentbb/FHIR_TEST.git"
+  },
+  "author": "vincent.bakpatina@ipnetinstitute.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mvincentbb/FHIR_TEST/issues"
+  },
+  "homepage": "https://github.com/mvincentbb/FHIR_TEST#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.13"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
