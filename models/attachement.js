@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const attachmentSchema = new Schema({
+  _id: false,
     contentType : {type: String}, // Mime type of the content, with charset etc.
   language : {type: String}, // Human language of the content (BCP-47)
   data : {type: Buffer}, // Data inline, base64ed
