@@ -58,10 +58,9 @@ const patientSchema = new Schema({
       other : { type: referenceSchema }, // R!  The other patient or related person resource that the link refers to
       type : { type: String, enum: ['replaced-by', 'replaces', 'refer', 'seealso'] } // R!  replaced-by | replaces | refer | seealso
     }]
-        
-      
-
-
-})
+},
+{ collection: 'Patient' }
+)
 
 module.exports = mongoose.model('Patient', patientSchema)
+module.exports = patientSchema
