@@ -10,6 +10,7 @@ const referenceSchema = require("./reference");
 const periodSchema = require("./period");
 const metaSchema = require("./meta");
 const textSchema = require("./text");
+const { Date } = require("../datatypes/primitivesTypes");
 
 const patientSchema = new Schema(
   {
@@ -69,10 +70,9 @@ const patientSchema = new Schema(
   },
   { collection: "Patient" }
 );
-// module.exports = patientSchema;
-const Patient = mongoose.model("Patient", patientSchema);
+
+// const Patient = mongoose.model("Patient", patientSchema);
 module.exports = {
-  Patient,
+  Patient: mongoose.model("Patient", patientSchema),
   patientSchema,
 };
-// module.exports = Patient;

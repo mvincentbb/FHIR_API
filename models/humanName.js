@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const  Schema  = mongoose.Schema
 const periodSchema = require('./period')
 
-humanNameSchema = new Schema({
+const humanNameSchema = new Schema({
 
   _id: false,
   use: { type: String, enum: ['usual', 'official', 'temp', 'nickname', 'anonymous', 'old', 'maiden']}, // usual | official | temp | nickname | anonymous | old | maiden
