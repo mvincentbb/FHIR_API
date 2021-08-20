@@ -1,31 +1,29 @@
-export const getOne = model => async(req, res)=>{
+export const getOne = (model) => async (req, res) => {
   try {
-    const doc = await model
-      .findOne({})
-      .lean()
-      .exec()
+    const doc = await model.findOne({}).lean().exec();
 
-    if(!doc) {
-      return res.status(400).end()
+    if (!doc) {
+      return res.status(400).end();
     }
-    res.status(200).json({ data: doc })
+    res.status(200).json({ data: doc });
   } catch (e) {
-    console.error(e)
-    res.status(400).end()
+    console.error(e);
+    res.status(400).end();
   }
-}
+};
 
+export const getMany = (model) => async (req, res) => {
+  try {
+    const docs = await model.find({}).lean().exec();
 
-export const getMany = model => async (req, res) => {
-  try{
-    const doc = await model
-      .find()
-      .lean()
-      .exec()
-    if (!doc){
-      return res.status(200).json()
+    if (!doc) {
+      return res.status(400).end();
     }
+    res.status(200).json({ data: docs });
+  } catch (e) {
+    console.error(e);
+    res.status(400).end();
   }
+};
 
-
-}
+create
