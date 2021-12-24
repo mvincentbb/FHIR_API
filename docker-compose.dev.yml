@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+    vaillant-batisseur-api:
+        build:
+            context: .
+        ports:
+            - 7898:7898
+            - 9229:9229
+        environment:
+            - SERVER_PORT=7898
+            - CONNECTIONSTRING=mongodb://mongo:27017/vaillant-batisseur
+        volumes:
+            - ./:/app
+        command: yarn dev
+
+    mongo:
+        image: mongo:4.2.8
+        ports:
+            - 27018:27017
+        volumes:
+            - mongodb:/data/db
+            - mongodb_config:/data/configdb
+volumes:
+    mongodb:
+    mongodb_config:
