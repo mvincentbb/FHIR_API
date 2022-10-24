@@ -1,5 +1,5 @@
 # HEALTH ASSURANCE APP 
-##TECH STACK
+## TECH STACK
 - NodeJs / ExpressJS
 - MongoDB database
 
