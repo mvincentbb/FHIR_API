@@ -19,6 +19,7 @@ The general objective of this work is to demonstrate the importance of standardi
 ## TECH STACK
 - NodeJs / ExpressJS
 - MongoDB database
+- ReactJS 
 
 
 ## ARCHITECTURE
